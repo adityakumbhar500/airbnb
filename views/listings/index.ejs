@@ -7,17 +7,17 @@
         flex-wrap: wrap;
         align-items: center;
       }
-      #filter{
+      .filter{
         margin-top: 2rem;
         text-align: center;
         margin-right: 2rem;
         opacity: 0.7;
       }
-      #filter:hover {
+      .filter:hover {
         opacity: 1;
         cursor: pointer;
       }
-      #filter p {
+      .filter p {
         font-size: 0.8rem;
       }
       .tax-info {
@@ -32,9 +32,28 @@
         display: flex;
         align-items: center ;
       }
+      @media (max-width: 768px) {
+        .filter:nth-child(n+5) {  
+           display: none;
+        }
+
+        .tax-toggle {
+           display: none; 
+        }
+     }
+
+  @media (min-width: 769px) {
+       .filter {
+          display: block !important;
+      }
+
+      .tax-toggle {
+         display: flex !important;
+      }
+    }
     </style>
      <div id="filters">
-      <div id="filter">
+      <div class="filter">
         <div><i class="fa-solid fa-fire"></i></div>
         <p>Trending</p>
       </div>
